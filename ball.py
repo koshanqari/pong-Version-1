@@ -10,7 +10,7 @@ class Ball(Turtle):
         super().__init__()
         self.shape('circle')
         self.penup()
-        self.setheading(random.randint(0,360))
+        self.setheading(random.randint(-45,45))
 
 
     def move(self):

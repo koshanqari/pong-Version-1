@@ -15,7 +15,7 @@ class Score(Turtle):
         self.penup()
         self.goto(-20,y/2)
         self.num = 0
-        self.write(f'Score : {self.num}', font=('Arial', 12, 'normal'))
+        self.write(f'Score : ', font=('Arial', 12, 'normal'))
 
     
     def score_up(self):

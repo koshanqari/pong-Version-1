@@ -37,10 +37,23 @@ my_screen.onkey(my_bat2.down, "s")
 start = True
 while start == True:
     time.sleep(.01)
-    
+
+    my_bat1.pos_update()
+    my_bat2.pos_update()
+
+    # print(my_bat1.bat_pos)
+    # print(my_bat2.bat_pos)
     my_ball.move()
-    if my_ball.xcor() >XCOR/2-14 or my_ball.xcor() < -XCOR/2+14:
+    print(my_ball.position())
+    print(my_bat1.bat_pos[0])
+    # for i in range(5): 
+    if my_ball.distance(my_bat1.bat_pos[0]) < 50 or my_ball.distance(my_bat1.bat_pos[1]) < 50 or my_ball.distance(my_bat1.bat_pos[2]) < 50 or my_ball.distance(my_bat1.bat_pos[3]) < 50 or my_ball.distance(my_bat1.bat_pos[4]) < 50:
         my_ball.snails_law_x()
+        my_score.score_up()
+    elif my_ball.xcor() >XCOR/2 or my_ball.xcor() < -XCOR/2:
+        # my_score.score_up()
+        # my_ball.snails_law_x()
+        my_score.game_over()
     elif my_ball.ycor() >YCOR/2-14 or my_ball.ycor() < -YCOR/2+14:
         my_ball.snails_law_y()
 
