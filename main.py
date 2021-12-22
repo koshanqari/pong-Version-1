@@ -47,7 +47,7 @@ while start == True:
     print(my_ball.position())
     print(my_bat1.bat_pos[0])
     # for i in range(5): 
-    if my_ball.distance(my_bat1.bat_pos[0]) < 50 or my_ball.distance(my_bat1.bat_pos[1]) < 50 or my_ball.distance(my_bat1.bat_pos[2]) < 50 or my_ball.distance(my_bat1.bat_pos[3]) < 50 or my_ball.distance(my_bat1.bat_pos[4]) < 50:
+    if my_ball.distance(my_bat1.bat_pos[0]) < 50 or my_ball.distance(my_bat1.bat_pos[1]) < 50 or my_ball.distance(my_bat1.bat_pos[2]) < 50 or my_ball.distance(my_bat1.bat_pos[3]) < 50 or my_ball.distance(my_bat1.bat_pos[4]) < 50 or my_ball.distance(my_bat2.bat_pos[0]) < 50 or my_ball.distance(my_bat2.bat_pos[1]) < 50 or my_ball.distance(my_bat2.bat_pos[2]) < 50 or my_ball.distance(my_bat2.bat_pos[3]) < 50 or my_ball.distance(my_bat2.bat_pos[4]) < 50:
         my_ball.snails_law_x()
         my_score.score_up()
     elif my_ball.xcor() >XCOR/2 or my_ball.xcor() < -XCOR/2:
