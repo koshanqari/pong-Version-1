@@ -10,10 +10,14 @@ class Bat(Turtle):
         self.goto(x,0)
 
     def up(self):
-        self.fd(10)
+        print(self.ycor())
+        if self.ycor() <= 250:
+            self.fd(50)
 
     def down(self):
-        self.bk(10)
+        print(self.ycor())
+        if self.ycor() >= -250:
+            self.bk(50)
         
     
 
